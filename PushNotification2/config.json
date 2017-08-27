@@ -51,6 +51,15 @@
             "useJwt": false,
             "timeout": 10000
        },
+       "publish": {
+           "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
        "stop": {
            "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
             "verb": "POST",
