@@ -22,7 +22,7 @@
             "outArguments": [
                 { "Id":"String" }
             ],
-            "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
+            "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
             "header": "Content-Type: application/json",
@@ -34,7 +34,7 @@
     "configurationArguments": {
        "applicationExtensionKey": "86bb0a03-ee66-4584-bc64-8ded48d91161",
        "save": {
-           "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
+           "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
             "header": "Content-Type: application/json",
@@ -43,7 +43,7 @@
             "timeout": 10000
        },
        "validate": {
-           "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
+           "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
             "header": "Content-Type: application/json",
@@ -52,7 +52,7 @@
             "timeout": 10000
        },
        "stop": {
-           "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
+           "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
             "header": "Content-Type: application/json",
