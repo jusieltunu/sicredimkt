@@ -5,7 +5,7 @@
         "iconSmall": "images/iconSmall.png",
         "category": "message"
     },
-    "type": "RESTDECISION",
+    "type": "REST",
     "lang": {
         "en-US": {
             "name": "Send Push Notification",
@@ -22,10 +22,10 @@
             "outArguments": [
                 { "Id":"String" }
             ],
-            "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
+            "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
-            "header": "",
+            "header": "Content-Type: application/json",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
@@ -34,28 +34,28 @@
     "configurationArguments": {
        "applicationExtensionKey": "86bb0a03-ee66-4584-bc64-8ded48d91161",
        "save": {
-           "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
+           "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
-            "header": "",
+            "header": "Content-Type: application/json",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
        },
        "validate": {
-           "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
+           "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
-            "header": "",
+            "header": "Content-Type: application/json",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
        },
        "stop": {
-           "url": "https://ocsc--orlandocitysc-cs65-force-com-uo9jpjl1s7gd.runscope.net/restapi/services/apexrest/testrest",
+           "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
-            "header": "",
+            "header": "Content-Type: application/json",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
