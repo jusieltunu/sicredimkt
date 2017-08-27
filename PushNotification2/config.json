@@ -5,7 +5,7 @@
         "iconSmall": "images/iconSmall.png",
         "category": "message"
     },
-    "type": "REST",
+    "type": "RESTDECISION",
     "lang": {
         "en-US": {
             "name": "Send Push Notification",
