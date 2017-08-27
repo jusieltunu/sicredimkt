@@ -16,7 +16,7 @@
         "execute": {
             "inArguments": [
                 {
-                    "clientId": "{{Contact.Attribute.__your-de-name__.FirstName}}"
+                    "Email": "{{InteractionDefaults.Email}}"
                 }
             ],
             "outArguments": [
