@@ -25,7 +25,7 @@
             "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
-            "header": "Content-Type: application/json",
+            "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
@@ -37,7 +37,7 @@
            "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
-            "header": "Content-Type: application/json",
+            "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
@@ -46,7 +46,7 @@
            "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
-            "header": "Content-Type: application/json",
+            "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
@@ -55,7 +55,7 @@
            "url": "https://ocsc-orlandocitysc.cs65.force.com/restapi/services/apexrest/testrest",
             "verb": "POST",
             "body": "",
-            "header": "Content-Type: application/json",
+            "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
