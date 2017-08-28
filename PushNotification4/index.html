@@ -1,87 +1,48 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Custom Journey Builder Activity v1.0</title>
+    <head>
+        <meta charset="utf-8">
+        <title>Custom Journey Builder Activity v1.3</title>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/require.js"></script>
-    <script type="text/javascript">
-        (function() {
-            var config = {
-                baseUrl: ''
-            };
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/require.js"></script>
+        <script type="text/javascript">
+            (function() {
+                var config = {
+                    baseUrl: ''
+                };
 
-            var dependencies = [
-                'customActivity'
-            ];
+                var dependencies = [
+                    'customActivity'
+                ];
 
-            require(config, dependencies);
-        })();
-    </script>
+                require(config, dependencies);
+            })();
+        </script>
 
-    <!--Styles-->
-    <style type="text/css">
-        body {
-            padding: 15px;
-            margin: 0;
-            font-size: 11px;
-            color: #16325c;
-            font-family: "Salesforce Sans", Arial, sans-serif;
-        }
+        <!--Styles-->
+        <style type="text/css">
+            body {
+                padding: 20px;
+                margin: 0;
+            }
+            .step {
+                display: none;
+            }
+            #step1 {
+                display: block;
+            }
+        </style>
 
-        .step {
-            display: none;
-        }
+    </head>
+    <body>
+        <div id="step1" class="step">
 
-        #step1 {
-            display: block;
-        }
-
-        input {
-            font-family: inherit;
-            display: block;
-            padding: 4px 5px;
-            font-size: 11px;
-            color: #16325c;
-            background-color: #ffffff;
-            background-image: none;
-            border: 1px solid #d8dde6;
-            border-radius: 0.25rem;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-        }
-
-        input[type=text] {
-            width: 95%;
-            margin-bottom: 40px;
-        }
-
-        .inputLabel {
-            margin-bottom: 5px;
-            font-size: 8pt;
-            color: #808080;
-            text-transform: uppercase;
-        }
-    </style>
-
-</head>
-<body>
-<div id="step1" class="step">
-    <p>Please provide the event definition key of the journey's entry event:</p>
-        <p class="inputLabel">Event Definition Key</p>
-        <input id="select-entryevent-defkey" placeholder="journey entry event's event definition key" type="text" required="required" minlength="1">
- 
-</div>
-<div id="step2" class="step">
-    Here's a second page with some info on it.
-</div>
-<div id="step3" class="step">
-    You chose the message: <div id="message"></div>
-</div>
-<div id="step4" class="step">
-    Hey, here's a fourth step, just for you.  Toggle this on or off from step 1.
-</div>
-</body>
+            Type your SMS message:
+            <input id="inputMessage" placeholder="Type your message here" type="text" required="required" minlength="1" autocomplete="off">
+        </div>
+        <div id="step2" class="step">
+            You chose the message: <div id="message"></div>
+        </div>
+    </body>
 </html>
