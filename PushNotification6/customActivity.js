@@ -96,9 +96,7 @@ define([
 
     function onClickedNext () {
         if (
-            (currentStep.key === 'step3' && steps[3].active === false) ||
-            currentStep.key === 'step4'
-        ) {
+            (currentStep.key === 'step2') {
             save();
         } else {
             connection.trigger('nextStep');
@@ -135,20 +133,9 @@ define([
                     visible: false
                 });
                 break;
+            
             case 'step2':
                 $('#step2').show();
-                connection.trigger('updateButton', {
-                    button: 'back',
-                    visible: true
-                });
-                connection.trigger('updateButton', {
-                    button: 'next',
-                    text: 'next',
-                    visible: true
-                });
-                break;
-            case 'step3':
-                $('#step3').show();
                 connection.trigger('updateButton', {
                      button: 'back',
                      visible: true
@@ -166,9 +153,6 @@ define([
                         visible: true
                     });
                 }
-                break;
-            case 'step4':
-                $('#step4').show();
                 break;
         }
     }
