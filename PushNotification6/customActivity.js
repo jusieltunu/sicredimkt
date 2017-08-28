@@ -157,7 +157,7 @@ define([
     }
 
     function save() {
-        var name = $('#inputMessage').val().html();
+        var name = $('#inputMessage').val();
         var value = getMessage();
 
         // 'payload' is initialized on 'initActivity' above.
