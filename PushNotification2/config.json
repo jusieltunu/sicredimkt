@@ -30,7 +30,6 @@
             "useJwt": false,
             "timeout": 10000
         }
-        }
     },
     "configurationArguments": {
       "applicationExtensionKey": "a11fd8af-6b03-4079-85d4-352c5ac80c0e",
