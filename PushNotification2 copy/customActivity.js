@@ -9,10 +9,10 @@ define([
     var payload = {};
     var lastStepEnabled = false;
     var steps = [ // initialize to the same value as what's set in config.json for consistency
-        { "label": "Step 1", "key": "step1" },
-        { "label": "Step 2", "key": "step2" },
-        { "label": "Step 3", "key": "step3" },
-        { "label": "Step 4", "key": "step4", "active": false }
+        { "label": "Step 1", "key": "step1" }//,
+        // { "label": "Step 2", "key": "step2" },
+        // { "label": "Step 3", "key": "step3" },
+        // { "label": "Step 4", "key": "step4", "active": false }
     ];
     var currentStep = steps[0].key;
 
@@ -34,7 +34,7 @@ define([
         connection.trigger('requestEndpoints');
 
         // Disable the next button if a value isn't selected
-        $('#select1').change(function() {
+        $('#txtMessage').change(function() {
             var message = getMessage();
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
 
@@ -97,14 +97,14 @@ define([
     }
 
     function onClickedNext () {
-        if (
-            (currentStep.key === 'step3' && steps[3].active === false) ||
-            currentStep.key === 'step4'
-        ) {
+        // if (
+        //     (currentStep.key === 'step3' && steps[3].active === false) ||
+        //     currentStep.key === 'step4'
+        // ) {
             save();
-        } else {
-            connection.trigger('nextStep');
-        }
+        // } else {
+        //     connection.trigger('nextStep');
+        // }
     }
 
     function onClickedBack () {
@@ -112,7 +112,7 @@ define([
     }
 
     function onGotoStep (step) {
-        showStep(step);
+        //showStep(step);
         connection.trigger('ready');
     }
 
@@ -176,16 +176,16 @@ define([
     }
 
     function save() {
-        var name = $('#select1').find('option:selected').html();
+        //var name = $('#select1').find('option:selected').html();
         var value = getMessage();
 
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
         // set by this activity's config.json file.  Any property
         // may be overridden as desired.
-        payload.name = name;
+        payload.name = 'Mensagem';
 
-        payload['arguments'].execute.inArguments = [{ "message": value }];
+        //payload['arguments'].execute.inArguments = [{ "message": value }];
 
         payload['metaData'].isConfigured = true;
 
@@ -193,7 +193,7 @@ define([
     }
 
     function getMessage() {
-        return $('#select1').find('option:selected').attr('value').trim();
+        return $('#txtMessage').val();
     }
 
 });
