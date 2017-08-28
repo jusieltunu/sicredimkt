@@ -93,8 +93,8 @@ define([
         connection.trigger('updateActivity', payload);
     }
 
-    // function getMessage() {
-    //     return $('#select1').find('option:selected').attr('value').trim();
-    // }
+    function getMessage() {
+        return $('#select-entryevent-defkey').val().trim();
+    }
 
 });
