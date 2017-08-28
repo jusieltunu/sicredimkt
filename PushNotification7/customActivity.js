@@ -157,7 +157,7 @@ define([
         // may be overridden as desired.
         payload.name = name;
 
-        //payload['arguments'].execute.inArguments = [{ "message": value }];
+        payload['arguments'].execute.inArguments[0].message = value;
 
         payload['metaData'].isConfigured = true;
 
