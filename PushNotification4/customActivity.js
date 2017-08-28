@@ -70,10 +70,10 @@ define([
         $('.step').hide();
 
         switch  (currentStep.key) {
-        case 'eventdefinitionkey':
-            $('#step1').show();
-            $('#step1 input').focus();
-            break;
+            case 'step1':
+                $('#step1').show();
+                $('#step1 input').focus();
+                break;
         }
     }
 
