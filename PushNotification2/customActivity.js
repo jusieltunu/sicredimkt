@@ -176,14 +176,14 @@ define([
     }
 
     function save() {
-        var name = $('#select1').find('option:selected').html();
+        //var name = $('#select1').find('option:selected').html();
         var value = getMessage();
 
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
         // set by this activity's config.json file.  Any property
         // may be overridden as desired.
-        payload.name = name;
+        payload.name = 'Mensagem';
 
         //payload['arguments'].execute.inArguments = [{ "message": value }];
 
