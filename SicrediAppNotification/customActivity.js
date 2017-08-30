@@ -57,25 +57,30 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        $.each(inArguments, function(index, inArgument) {
-            $.each(inArgument, function(key, val) {
-                if (key === 'message') {
-                    message = val;
-                }
-                if (key === 'title') {
-                    title = val;
-                }
-            });
-        });
+        // $.each(inArguments, function(index, inArgument) {
+        //     $.each(inArgument, function(key, val) {
+        //         if (key === 'message') {
+        //             message = val;
+        //         }
+        //         if (key === 'title') {
+        //             title = val;
+        //         }
+        //     });
+        // });
 
         // If there is no message selected, disable the next button
-        if (!message) {
+        if (!inArguments[0].message ) {
             showStep(null, 1);
             connection.trigger('updateButton', { button: 'next', enabled: false });
             // If there is a message, skip to the summary step
         } else {
-            $('#message').val(message);
-            $('#divMessage').html(title + ' - ' + message );
+            $('#message').val(inArguments[0].message);
+            $('#divMessage').html(inArguments[0].title + ' - ' + inArguments[0].message );
+            $('#title').html(inArguments[0].title);
+            $('#prioridade').html(inArguments[0].prioridade);
+            $('#from').html(inArguments[0].from);
+            $('#action').html(inArguments[0].action);
+            //$('#action').html(inArguments[0].title + ' - ' + message );
             showStep(null, 2);
         }
     }
