@@ -37,7 +37,7 @@ define([
 
             connection.trigger('updateButton', { button: 'next', enabled: camposPreenchidos() });
 
-            $('#message').html(message);
+            $('#divMessage').html(message);
         });
     }
 
@@ -45,9 +45,9 @@ define([
         if (data) {
             payload = data;
         }
+        var message = '';
+        var title = '';
 
-        var message;
-        var title;
         var hasInArguments = Boolean(
             payload['arguments'] &&
             payload['arguments'].execute &&
@@ -74,7 +74,7 @@ define([
             connection.trigger('updateButton', { button: 'next', enabled: false });
             // If there is a message, skip to the summary step
         } else {
-            //$('#message').val(message);
+            $('#message').val(message);
             $('#divMessage').html(title + ' - ' + message );
             showStep(null, 2);
         }
