@@ -47,6 +47,7 @@ define([
         }
 
         var message;
+        var title;
         var hasInArguments = Boolean(
             payload['arguments'] &&
             payload['arguments'].execute &&
@@ -61,6 +62,9 @@ define([
                 if (key === 'message') {
                     message = val;
                 }
+                if (key === 'title') {
+                    title = val;
+                }
             });
         });
 
@@ -70,8 +74,8 @@ define([
             connection.trigger('updateButton', { button: 'next', enabled: false });
             // If there is a message, skip to the summary step
         } else {
-            $('#message').val(message);
-            $('#divMessage').html(message);
+            //$('#message').val(message);
+            $('#divMessage').html(title + ' - ' + message );
             showStep(null, 2);
         }
     }
@@ -150,15 +154,19 @@ define([
 
     function save() {
         var name = $('#message').val();
-        var value = getMessage();
+        //var value = getMessage();
 
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
         // set by this activity's config.json file.  Any property
         // may be overridden as desired.
-        payload.name = name;
+        payload.name = 'Push Notification App';
 
-        payload['arguments'].execute.inArguments[0].message = value;
+        payload['arguments'].execute.inArguments[0].message = $('#message').val();
+        payload['arguments'].execute.inArguments[0].priority = $('#prioridade').val();
+        payload['arguments'].execute.inArguments[0].from = $('#from').val();
+        payload['arguments'].execute.inArguments[0].action = $('#action').val();
+        payload['arguments'].execute.inArguments[0].title = $('#title').val();
 
         payload['metaData'].isConfigured = true;
 
