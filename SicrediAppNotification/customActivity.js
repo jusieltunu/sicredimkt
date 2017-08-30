@@ -37,7 +37,7 @@ define([
 
             connection.trigger('updateButton', { button: 'next', enabled: camposPreenchidos() });
 
-            $('#divMessage').html(message);
+            $('#divMessage').html( message);
         });
     }
 
@@ -75,7 +75,7 @@ define([
             // If there is a message, skip to the summary step
         } else {
             $('#message').val(inArguments[0].message);
-            $('#divMessage').html(inArguments[0].title + ' - ' + inArguments[0].message );
+            $('#divMessage').html(getMessage());
             $('#title').html(inArguments[0].title);
             $('#prioridade').html(inArguments[0].prioridade);
             $('#from').html(inArguments[0].from);
@@ -187,7 +187,7 @@ define([
         }
     }
     function getMessage() {
-        return $('#message').val().trim();
+        return $('#title').val().trim() + ' - ' + $('#message').val().trim();
     }
 
 });
