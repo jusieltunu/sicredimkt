@@ -165,7 +165,7 @@ define([
         connection.trigger('updateActivity', payload);
     }
 
-    function camposPreenchidos(){
+    function  camposPreenchidos(){
         if($('#action').val() == '' || $('#title').val() == '' || $('#from').val() == '' || $('#message').val() == ''){
             return false;
         }
