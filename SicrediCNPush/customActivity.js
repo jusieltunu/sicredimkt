@@ -8,7 +8,7 @@ define([
     var connection = new Postmonger.Session();
     var payload = {};
     var lastStepEnabled = false;
-    var steps = [ // initialize to the same value as what's set in config.json for consistency
+    var steps = [ 
         { "label": "Step 1", "key": "step1" },
         { "label": "Step 2", "key": "step2" }
     ];
@@ -57,18 +57,6 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        // $.each(inArguments, function(index, inArgument) {
-        //     $.each(inArgument, function(key, val) {
-        //         if (key === 'message') {
-        //             message = val;
-        //         }
-        //         if (key === 'title') {
-        //             title = val;
-        //         }
-        //     });
-        // });
-
-        // If there is no message selected, disable the next button
         if (!inArguments[0].message ) {
             showStep(null, 1);
             connection.trigger('updateButton', { button: 'next', enabled: false });
@@ -158,12 +146,7 @@ define([
 
     function save() {
         var name = $('#message').val();
-        //var value = getMessage();
 
-        // 'payload' is initialized on 'initActivity' above.
-        // Journey Builder sends an initial payload with defaults
-        // set by this activity's config.json file.  Any property
-        // may be overridden as desired.
         payload.name = 'Push Notification App';
 
         payload['arguments'].execute.inArguments[0].message = $('#message').val();
