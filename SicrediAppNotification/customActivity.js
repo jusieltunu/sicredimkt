@@ -75,12 +75,11 @@ define([
             // If there is a message, skip to the summary step
         } else {
             $('#message').val(inArguments[0].message);
+            $('#title').val(inArguments[0].title);
+            $('#prioridade').val(inArguments[0].prioridade);
+            $('#from').val(inArguments[0].from);
+            $('#action').val(inArguments[0].action);
             $('#divMessage').html(getMessage());
-            $('#title').html(inArguments[0].title);
-            $('#prioridade').html(inArguments[0].prioridade);
-            $('#from').html(inArguments[0].from);
-            $('#action').html(inArguments[0].action);
-            //$('#action').html(inArguments[0].title + ' - ' + message );
             showStep(null, 2);
         }
     }
