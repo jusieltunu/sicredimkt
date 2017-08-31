@@ -76,7 +76,7 @@ define([
         } else {
             $('#message').val(inArguments[0].message);
             $('#title').val(inArguments[0].title);
-            $('#prioridade').val(inArguments[0].priority);
+            $('#prioridade').val(inArguments[0].priority); 
             $('#from').val(inArguments[0].from);
             $('#action').val(inArguments[0].action);
             $('#divMessage').html(getMessage());
