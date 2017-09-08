@@ -18,7 +18,7 @@
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
                     "priority": "",
-                    "from": "",
+                    "msgFrom": "",
                     "action": "",
                     "title": "",
                     "message": ""
