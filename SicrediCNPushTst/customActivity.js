@@ -147,7 +147,7 @@ define([
     function save() {
         var name = $('#message').val();
 
-        payload.name = 'Push TST - ' + $('#title').val();
+        payload.name = 'Push TST -' + $('#title').val();
 
         payload['arguments'].execute.inArguments[0].message = $('#message').val();
         payload['arguments'].execute.inArguments[0].priority = $('#prioridade').val();
