@@ -27,7 +27,7 @@
             "outArguments": [
                 { "Id":"String" }
             ],
-            "url": "https://sicredi-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt_push",
+            "url": "https://sicredi-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt_push",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -39,7 +39,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "a11fd8af-6b03-4079-85d4-352c5ac80c0e",
        "save": {
-           "url": "https://sicredi-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://sicredi-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -48,7 +48,7 @@
             "timeout": 10000
        },
        "validate": {
-           "url": "https://sicredi-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://sicredi-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -57,7 +57,7 @@
             "timeout": 10000
        },
        "publish": {
-           "url": "https://sicredi-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://sicredi-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -66,7 +66,7 @@
             "timeout": 10000
        },
        "stop": {
-           "url": "https://sicredi-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://sicredi-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
