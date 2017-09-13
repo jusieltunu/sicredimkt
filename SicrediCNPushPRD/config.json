@@ -8,7 +8,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "CN Push Tst",
+           "name": "CN Push PRD",
            "description": "Atividade executa o push na central de notificação da Sicredi."
        }
     },
