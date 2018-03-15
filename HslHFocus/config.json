@@ -8,8 +8,8 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "CN Push Tst",
-           "description": "Atividade executa o push na central de notificação da Sicredi."
+           "name": "Integracao HFocus",
+           "description": "Atividade envia a integração do cliente para o HFocus."
        }
     },
     "arguments": {
