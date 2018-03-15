@@ -8,8 +8,8 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "CN Push Tst",
-           "description": "Atividade executa o push na central de notificação da Sicredi."
+           "name": "Integracao HFocus",
+           "description": "Atividade envia a integração do cliente para o HFocus."
        }
     },
     "arguments": {
@@ -17,17 +17,13 @@
             "inArguments": [
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
-                    "priority": "",
-                    "msgFrom": "",
-                    "action": "",
-                    "title": "",
-                    "message": ""
+                    "atendimentoId": "{{InteractionDefaults.AtendimentoId}}"
                 }
             ],
             "outArguments": [
                 { "Id":"String" }
             ],
-            "url": "https://tst--sicredi-cs77-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt_push",
+            "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt_hfocus",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -39,7 +35,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "a11fd8af-6b03-4079-85d4-352c5ac80c0e",
        "save": {
-           "url": "https://tst--sicredi-cs77-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -48,7 +44,7 @@
             "timeout": 10000
        },
        "validate": {
-           "url": "https://tst--sicredi-cs77-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -57,7 +53,7 @@
             "timeout": 10000
        },
        "publish": {
-           "url": "https://tst--sicredi-cs77-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -66,7 +62,7 @@
             "timeout": 10000
        },
        "stop": {
-           "url": "https://tst--sicredi-cs77-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -110,4 +106,4 @@
             }
         }
     }
-}
+}s
