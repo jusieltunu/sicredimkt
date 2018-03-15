@@ -62,11 +62,11 @@ define([
             connection.trigger('updateButton', { button: 'next', enabled: false });
             // If there is a message, skip to the summary step
         } else {
-            $('#message').val(inArguments[0].message);
-            $('#title').val(inArguments[0].title);
-            $('#prioridade').val(inArguments[0].priority); 
-            $('#msgFrom').val(inArguments[0].msgFrom);
-            $('#action').val(inArguments[0].action);
+            // $('#message').val(inArguments[0].message);
+            // $('#title').val(inArguments[0].title);
+            // $('#prioridade').val(inArguments[0].priority); 
+            // $('#msgFrom').val(inArguments[0].msgFrom);
+            // $('#action').val(inArguments[0].action);
             $('#divMessage').html(getMessage());
             showStep(null, 2);
         }
@@ -145,15 +145,15 @@ define([
     }
 
     function save() {
-        var name = $('#message').val();
+        // var name = $('#message').val();
 
-        payload.name = 'Push TST -' + $('#title').val();
+        payload.name = 'Pesquisa HFocus'; //+ $('#title').val();
 
-        payload['arguments'].execute.inArguments[0].message = $('#message').val();
-        payload['arguments'].execute.inArguments[0].priority = $('#prioridade').val();
-        payload['arguments'].execute.inArguments[0].msgFrom = $('#msgFrom').val();
-        payload['arguments'].execute.inArguments[0].action = $('#action').val();
-        payload['arguments'].execute.inArguments[0].title = $('#title').val();
+        // payload['arguments'].execute.inArguments[0].message = $('#message').val();
+        // payload['arguments'].execute.inArguments[0].priority = $('#prioridade').val();
+        // payload['arguments'].execute.inArguments[0].msgFrom = $('#msgFrom').val();
+        // payload['arguments'].execute.inArguments[0].action = $('#action').val();
+        // payload['arguments'].execute.inArguments[0].title = $('#title').val();
 
         payload['metaData'].isConfigured = true;
 
@@ -161,15 +161,16 @@ define([
     }
 
     function  camposPreenchidos(){
-        if($('#action').val() == '' || $('#title').val() == '' || $('#msgFrom').val() == '' || $('#message').val() == ''){
-            return false;
-        }
-        else{
-            return true;
-        }
+        return true;
+        // if($('#action').val() == '' || $('#title').val() == '' || $('#msgFrom').val() == '' || $('#message').val() == ''){
+        //     return false;
+        // }
+        // else{
+        //     return true;
+        // }
     }
     function getMessage() {
-        return $('#title').val().trim() + ' - ' + $('#message').val().trim();
+        return 'Configuração de Pesquisa HFocus'; //$('#title').val().trim() + ' - ' + $('#message').val().trim();
     }
 
 });

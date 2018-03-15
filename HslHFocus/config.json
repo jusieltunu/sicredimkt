@@ -16,12 +16,8 @@
         "execute": {
             "inArguments": [
                 {
-                    "emailAddress": "{{InteractionDefaults.Email}}",
-                    "priority": "",
-                    "msgFrom": "",
-                    "action": "",
-                    "title": "",
-                    "message": ""
+                   "emailAddress": "{{InteractionDefaults.Email}}",
+                   "atendimentoId": "{{InteractionDefaults.AtendimentoId}}"
                 }
             ],
             "outArguments": [
