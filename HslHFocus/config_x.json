@@ -1,0 +1,109 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+       "icon": "images/icon.png",
+       "iconSmall": "images/iconSmall.png",
+       "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+       "en-US": {
+           "name": "Integracao HFocus",
+           "description": "Atividade envia a integração do cliente para o HFocus."
+       }
+    },
+    "arguments": {
+        "execute": {
+            "inArguments": [
+                {
+                    "emailAddress": "{{InteractionDefaults.Email}}",
+                    "atendimentoId": "{{InteractionDefaults.AtendimentoId}}"
+                }
+            ],
+            "outArguments": [
+                { "Id":"String" }
+            ],
+            "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt_hfocus",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "a11fd8af-6b03-4079-85d4-352c5ac80c0e",
+       "save": {
+           "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "validate": {
+           "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "publish": {
+           "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "stop": {
+           "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       }
+    },
+    "wizardSteps": [
+       { "label": "Step 1", "key": "step1" },
+       { "label": "Step 2", "key": "step2" }
+    ],
+    "userInterfaces": {
+       "configModal": {
+           "height": 200,
+           "width": 300,
+           "fullscreen": true
+       }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
+                "outArguments": [
+                    {
+                        "foundSignupDate": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}s
