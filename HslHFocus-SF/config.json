@@ -8,7 +8,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "Integracao HFocus",
+           "name": "Integracao HFocus SF",
            "description": "Atividade envia a integração do cliente para o HFocus."
        }
     },
@@ -16,8 +16,7 @@
         "execute": {
             "inArguments": [
                 {
-                   "emailAddress": "{{InteractionDefaults.Email}}",
-                   "atendimentoId": "{{InteractionDefaults.AtendimentoId}}"
+                   "atendimentoId": "{{InteractionDefaults.Atendimento__c:Id}}"
                 }
             ],
             "outArguments": [
