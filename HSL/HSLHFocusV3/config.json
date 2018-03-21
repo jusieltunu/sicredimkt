@@ -37,7 +37,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "a11fd8af-6b03-4079-85d4-352c5ac80c0e",
+      "applicationExtensionKey": "6ee2d793-3e44-4d5c-aa32-54de12bb1f96",
        "save": {
            "url": "https://dev--hospitalsiriolibanesdev-cs20-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
