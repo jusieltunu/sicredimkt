@@ -17,6 +17,7 @@
             "inArguments": [
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
+                    "atendimentoId": "{{InteractionDefaults.AtendimentoId}}",
                     "priority": "",
                     "msgFrom": "",
                     "action": "",
