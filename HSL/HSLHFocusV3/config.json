@@ -8,8 +8,8 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "HSL vs HFocus",
-           "description": "Atividade de integração com o HFocus."
+           "name": "HSL vs HFocus-X",
+           "description": "Atividade de integração com o HFocus"
        }
     },
     "arguments": {
