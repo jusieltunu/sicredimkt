@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Custom Journey Builder Activity v1.3</title>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/require.js"></script>
+        <script type="text/javascript">
+            (function() {
+                var config = {
+                    baseUrl: ''
+                };
+
+                var dependencies = [
+                    'customActivity'
+                ];
+
+                require(config, dependencies);
+            })();
+        </script>
+
+        <style type="text/css">
+        body {
+            padding: 15px;
+            margin: 0;
+            font-size: 11px;
+            color: #16325c;
+            font-family: "Salesforce Sans", Arial, sans-serif;
+        }
+
+        .step {
+            display: none;
+        }
+
+        #step1 {
+            display: block;
+        }
+
+        input {
+            font-family: inherit;
+            display: block;
+            padding: 4px 5px;
+            font-size: 11px;
+            color: #16325c;
+            background-color: #ffffff;
+            background-image: none;
+            border: 1px solid #d8dde6;
+            border-radius: 0.25rem;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        input[type=text] {
+            width: 95%;
+            margin-bottom: 10px;
+        }
+
+        .inputLabel {
+            margin-bottom: 5px;
+            font-size: 8pt;
+            color: #808080;
+            text-transform: uppercase;
+        }
+    </style>
+
+    </head>
+    <body>
+        <div id="step1" class="step">
+            <p>Please provide the values of the journey's entry event:</p>
+            <p class="inputLabel">Prioridade</p>
+            <select id="prioridade">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+            <p class="inputLabel">From *</p>
+            <input id="msgFrom" placeholder="Nome que identifique a origem da mensagem - obrigatório" type="text" required="required" minlength="1" autocomplete="off">
+            <p class="inputLabel">Action *</p>
+            <input id="action" placeholder="Ação que será tratada/realizada no aplicativo" type="text" required="required" minlength="1" autocomplete="off">
+            <p class="inputLabel">Title *</p>
+            <input id="title" placeholder="Título que será apresentado na notificação - obrigatório - máx. 50 caracteres" type="text" required="required" minlength="1" maxlength="50" autocomplete="off">
+            <p class="inputLabel">Message *</p>
+            <input id="message" placeholder="Conteúdo da notificação - obrigatório - máx. 140 caracteres" type="text" required="required" minlength="1" maxlength="140" autocomplete="off">
+        </div>
+        <div id="step2" class="step">
+            You chose the message: <div id="divMessage"></div>
+        </div>
+    </body>
+</html>

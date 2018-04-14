@@ -1,0 +1,114 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+       "icon": "images/icon.png",
+       "iconSmall": "images/iconSmall.png",
+       "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+       "en-US": {
+           "name": "HSL vs HFocus-Y",
+           "description": "Atividade de integração com o HFocus"
+       }
+    },
+    "arguments": {
+        "execute": {
+            "inArguments": [
+                {
+                    "emailAddress": "{{InteractionDefaults.Email}}",
+                    "atendimentoId": "{{Contact.Attribute.AtendimentosDia.AtendimentoId}}",
+                    "priority": "",
+                    "msgFrom": "",
+                    "action": "",
+                    "title": "",
+                    "message": ""
+                }
+            ],
+            "outArguments": [
+                { "Id":"String" }
+            ],
+            "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt_hfocus",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "6ee2d793-3e44-4d5c-aa32-54de12bb1f96",
+       "save": {
+           "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "validate": {
+           "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "publish": {
+           "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "stop": {
+           "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       }
+    },
+    "wizardSteps": [
+       { "label": "Step 1", "key": "step1" },
+       { "label": "Step 2", "key": "step2" }
+    ],
+    "userInterfaces": {
+       "configModal": {
+           "height": 200,
+           "width": 300,
+           "fullscreen": true
+       }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
+                "outArguments": [
+                    {
+                        "foundSignupDate": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
