@@ -8,7 +8,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "HFocus PRD3",
+           "name": "HFocus PRD4",
            "description": "Atividade de integração com o HFocus"
        }
     },
@@ -17,7 +17,7 @@
             "inArguments": [
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
-                    "atendimentoId": "{{Event.0feecfed-5ec6-47e4-9824-21074f40f82f.Atendimento__c:Id}}",
+                    "atendimentoId": "{{SalesforceObj2c0a5646c5711dd855dbe7b4989ac87d.Atendimento__c:Id}}",
                     "priority": "",
                     "msgFrom": "",
                     "action": "",
