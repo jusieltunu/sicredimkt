@@ -17,7 +17,7 @@
             "inArguments": [
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
-                    "atendimentoId": "{{Contact.Attribute['Pesquisa Satisfao - 2018-04-15T104934394'].['Atendimento__c:Id']}}",
+                    "atendimentoId": "{Contact.Attribute["Pesquisa Satisfao - 2018-04-15T104934394"].["Atendimento__c:Id"]}}",
                     "priority": "",
                     "msgFrom": "",
                     "action": "",
