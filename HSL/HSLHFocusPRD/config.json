@@ -8,7 +8,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "HSL vs HFocus-Y",
+           "name": "HFocus PRD",
            "description": "Atividade de integração com o HFocus"
        }
     },
@@ -17,7 +17,7 @@
             "inArguments": [
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
-                    "atendimentoId": "{{Contact.Attribute.AtendimentosDia.AtendimentoId}}",
+                    "atendimentoId": "{{Contact.Attribute['Pesquisa Satisfao - 2018-04-15T104934394'].['Atendimento__c:Id']}}",
                     "priority": "",
                     "msgFrom": "",
                     "action": "",
