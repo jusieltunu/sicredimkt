@@ -8,7 +8,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "HFocus PRD4",
+           "name": "HFocus PRD1",
            "description": "Atividade de integração com o HFocus"
        }
     },
@@ -17,7 +17,10 @@
             "inArguments": [
                 {
                     "emailAddress": "{{InteractionDefaults.Email}}",
-                    "atendimentoId": "{{SalesforceObj2c0a5646c5711dd855dbe7b4989ac87d.Atendimento__c:Id}}",
+                    "atendimentoId": "{{Contact.Attribute.\"Pesquisa Satisfao - 2018-04-15T104934394\".\"Atendimento__c:Id\"}}",
+                    "atendimentoEventId": "{{Event.SalesforceObj2c0a5646c5711dd855dbe7b4989ac87d.Atendimento__c:Id}}",
+                    "atendimentoBracketsId": "{{Contact.Attribute.[\"Pesquisa Satisfao - 2018-04-15T104934394\"].[\"Atendimento__c:Id\"]}}",
+                    "contactKey": "{{Contact.Key}}",
                     "priority": "",
                     "msgFrom": "",
                     "action": "",
