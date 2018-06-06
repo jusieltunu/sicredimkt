@@ -8,8 +8,8 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "HFocus PRD1",
-           "description": "Atividade de integração com o HFocus"
+           "name": "HFocus PRD",
+           "description": "Atividade de integração com o HFocus PRD"
        }
     },
     "arguments": {
@@ -31,7 +31,7 @@
             "outArguments": [
                 { "Id":"String" }
             ],
-            "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt_hfocus",
+            "url": "https://hospitalsiriolibanes.secure.force.com/integracao/services/apexrest/custom_activity_mkt_hfocus",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -43,7 +43,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "6ee2d793-3e44-4d5c-aa32-54de12bb1f96",
        "save": {
-           "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://hospitalsiriolibanes.secure.force.com/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -52,7 +52,7 @@
             "timeout": 10000
        },
        "validate": {
-           "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://hospitalsiriolibanes.secure.force.com/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -61,7 +61,7 @@
             "timeout": 10000
        },
        "publish": {
-           "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://hospitalsiriolibanes.secure.force.com/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -70,7 +70,7 @@
             "timeout": 10000
        },
        "stop": {
-           "url": "https://hospitalsiriolibanes-secure-force-com-sd9iarxyxarz.runscope.net/integracao/services/apexrest/custom_activity_mkt",
+           "url": "https://hospitalsiriolibanes.secure.force.com/integracao/services/apexrest/custom_activity_mkt",
             "verb": "POST",
             "body": "",
             "header": "",
