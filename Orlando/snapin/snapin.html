@@ -4,40 +4,58 @@
 	</header>
 	<body></body>
 	<style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton { background-color: #5D2F98; font-family: "Salesforce Sans", sans-serif; }
-	.embeddedServiceHelpButton .helpButton .uiButton:focus { outline: 1px solid #5D2F98; }
-	@font-face {
-	font-family: 'Salesforce Sans';
-	src: url('https://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.woff') format('woff'),
-	url('https://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.ttf') format('truetype');
-	}
+		.embeddedServiceHelpButton .helpButton .uiButton { background-color: #5D2F98; font-family: "Salesforce Sans", sans-serif; }
+		.embeddedServiceHelpButton .helpButton .uiButton:focus { outline: 1px solid #5D2F98; }
+		@font-face {
+			font-family: 'Salesforce Sans';
+			src: url('https://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.woff') format('woff'),
+			url('https://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.ttf') format('truetype');
+		}
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/4.1/esw.min.js'></script>
 <script type='text/javascript'>
-var initESW = function(gslbBaseURL) {
-embedded_svc.settings.displayHelpButton = true; //Or false
-embedded_svc.settings.language = 'en-US'; //For example, enter 'en' or 'en-US'
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = 'en-US'; //For example, enter 'en' or 'en-US'
 
-embedded_svc.settings.defaultMinimizedText = 'Live Chat'; //(Defaults to Chat with an Expert)
-embedded_svc.settings.disabledMinimizedText = 'Chat Offline'; //(Defaults to Agent Offline)
+		embedded_svc.settings.defaultMinimizedText = 'Live Chat'; //(Defaults to Chat with an Expert)
+		embedded_svc.settings.disabledMinimizedText = 'Chat Offline'; //(Defaults to Agent Offline)
 
-embedded_svc.settings.loadingText = 'Loading'; //(Defaults to Loading)
-//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+		embedded_svc.settings.loadingText = 'Loading'; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
-// Settings for Live Agent
-embedded_svc.settings.avatarImgURL = '';
-embedded_svc.settings.prechatBackgroundImgURL = '';
-embedded_svc.settings.waitingStateBackgroundImgURL = '';
-embedded_svc.settings.smallCompanyLogoImgURL = 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Orlando_City_2014.svg/200px-Orlando_City_2014.svg.png';
-//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-//Returns a valid button ID.
-//};
+		// Settings for Live Agent
+		embedded_svc.settings.avatarImgURL = 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Orlando_City_2014.svg/200px-Orlando_City_2014.svg.png';
+		embedded_svc.settings.prechatBackgroundImgURL = 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Orlando_City_2014.svg/200px-Orlando_City_2014.svg.png';
+		embedded_svc.settings.waitingStateBackgroundImgURL = 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Orlando_City_2014.svg/200px-Orlando_City_2014.svg.png';
+		embedded_svc.settings.smallCompanyLogoImgURL = 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Orlando_City_2014.svg/200px-Orlando_City_2014.svg.png';
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+		// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+		//Returns a valid button ID.
+		//};
 
-embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-embedded_svc.settings.entryFeature = 'LiveAgent';
-//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 
-embedded_svc.init('https://orlandocitysc--OCSC.cs65.my.salesforce.com', 'https://ocsc-orlandocitysc.cs65.force.com/restapi', gslbBaseURL, '00D0m0000000Oi6', 'SnapinButtonGuestExperience', { baseLiveAgentContentURL: 'https://c.la1-c1cs-ord.salesforceliveagent.com/content', deploymentId: '5720m000000000u', buttonId: '5730m0000008OUf', baseLiveAgentURL: 'https://d.la1-c1cs-ord.salesforceliveagent.com/chat', eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I0m0000004C9IEAU_163d3944d5e'}); };if (!window.embedded_svc) { var s = document.createElement('script'); s.setAttribute('src', 'https://orlandocitysc--OCSC.cs65.my.salesforce.com/embeddedservice/4.1/esw.min.js'); s.onload = function() { initESW(null); }; document.body.appendChild(s); } else { initESW('https://service.force.com'); }</script>
+		embedded_svc.init('https://orlandocitysc--OCSC.cs65.my.salesforce.com', 
+						  'https://ocsc-orlandocitysc.cs65.force.com/restapi', 
+						  gslbBaseURL, 
+						  '00D0m0000000Oi6', 
+						  'SnapinButtonGuestExperience', 
+						  { baseLiveAgentContentURL: 'https://c.la1-c1cs-ord.salesforceliveagent.com/content', 
+						    deploymentId: '5720m000000000u', 
+						    buttonId: '5730m0000008OUf', 
+						    baseLiveAgentURL: 'https://d.la1-c1cs-ord.salesforceliveagent.com/chat', 
+						    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I0m0000004C9IEAU_163d3944d5e'}
+						    ); 
+    };
+    if (!window.embedded_svc) { 
+    	var s = document.createElement('script'); 
+    	s.setAttribute('src', 'https://orlandocitysc--OCSC.cs65.my.salesforce.com/embeddedservice/4.1/esw.min.js'); 
+    	s.onload = function() { initESW(null); }; 
+    	document.body.appendChild(s); } 
+    	else { initESW('https://service.force.com'); }
+</script>
 </html>
