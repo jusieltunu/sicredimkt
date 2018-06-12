@@ -66,6 +66,7 @@ define([
             $('#title').val(inArguments[0].title);
             $('#prioridade').val(inArguments[0].priority); 
             $('#msgFrom').val(inArguments[0].msgFrom);
+            $('#codigoComunicacao').val(inArguments[0].codigoComunicacao);
             $('#action').val(inArguments[0].action);
             $('#divMessage').html(getMessage());
             showStep(null, 2);
@@ -152,6 +153,7 @@ define([
         payload['arguments'].execute.inArguments[0].message = $('#message').val();
         payload['arguments'].execute.inArguments[0].priority = $('#prioridade').val();
         payload['arguments'].execute.inArguments[0].msgFrom = $('#msgFrom').val();
+        payload['arguments'].execute.inArguments[0].codigoComunicacao = $('#codigoComunicacao').val();
         payload['arguments'].execute.inArguments[0].action = $('#action').val();
         payload['arguments'].execute.inArguments[0].title = $('#title').val();
 
@@ -161,7 +163,7 @@ define([
     }
 
     function  camposPreenchidos(){
-        if($('#action').val() == '' || $('#title').val() == '' || $('#msgFrom').val() == '' || $('#message').val() == ''){
+        if($('#action').val() == '' || $('#title').val() == '' || $('#msgFrom').val() == '' || $('#message').val() == '' || $('#codigoComunicacao').val() == ''){
             return false;
         }
         else{
