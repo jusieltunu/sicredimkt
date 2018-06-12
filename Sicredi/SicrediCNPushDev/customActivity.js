@@ -67,6 +67,7 @@ define([
             $('#prioridade').val(inArguments[0].priority); 
             $('#msgFrom').val(inArguments[0].msgFrom);
             $('#action').val(inArguments[0].action);
+            $('#codigoComunicacao').val(inArguments[0].codigoComunicacao);
             $('#divMessage').html(getMessage());
             showStep(null, 2);
         }
@@ -154,6 +155,7 @@ define([
         payload['arguments'].execute.inArguments[0].msgFrom = $('#msgFrom').val();
         payload['arguments'].execute.inArguments[0].action = $('#action').val();
         payload['arguments'].execute.inArguments[0].title = $('#title').val();
+        payload['arguments'].execute.inArguments[0].codigoComunicacao = $('#codigoComunicacao').val();
 
         payload['metaData'].isConfigured = true;
 
@@ -161,7 +163,7 @@ define([
     }
 
     function  camposPreenchidos(){
-        if($('#action').val() == '' || $('#title').val() == '' || $('#msgFrom').val() == '' || $('#message').val() == ''){
+        if($('#action').val() == '' || $('#title').val() == '' || $('#msgFrom').val() == '' || $('#message').val() == '' || || $('#codigoComunicacao').val() == ''){
             return false;
         }
         else{
